@@ -3,14 +3,13 @@ import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { Droplet, Leaf, Utensils } from "lucide-react";
 import { useAuth0 } from "@auth0/auth0-react";
+import heroImage from "../assets/N2HMMGN-2.png";
 
-// Define the props interface for the TextSection component
 interface TextSectionProps {
   title: string;
   subtitle: string;
 }
 
-// TextSection component displays the textual content of the hero section
 const TextSection: React.FC<TextSectionProps> = ({ title, subtitle }) => {
   const updatedTitle = title.split(" ").map((word, index) =>
     word.toLowerCase() === "first" ? (
@@ -58,11 +57,9 @@ const TextSection: React.FC<TextSectionProps> = ({ title, subtitle }) => {
   );
 };
 
-// OrderNowButton component renders the button for ordering
 const OrderNowButton: React.FC = () => {
   const { isAuthenticated, loginWithRedirect } = useAuth0();
 
-  // Handler for clicking the Order Now button
   const handleOrderNowClick = () => {
     if (isAuthenticated) {
       // Redirect logic can be handled here if needed
@@ -89,13 +86,11 @@ const OrderNowButton: React.FC = () => {
   );
 };
 
-// Define the props interface for the ImageSection component
 interface ImageSectionProps {
   imageUrl: string;
   alt: string;
 }
 
-// ImageSection component renders the image of the hero section
 const ImageSection: React.FC<ImageSectionProps> = ({ imageUrl, alt }) => {
   return (
     <div className="lg:w-2/5">
@@ -109,19 +104,17 @@ const ImageSection: React.FC<ImageSectionProps> = ({ imageUrl, alt }) => {
   );
 };
 
-// Define the props interface for the HeroSection component
 interface HeroSectionProps {
   title?: string;
   subtitle?: string;
-  imageUrl?: string;
+  imageUrl?: string; // Remove curly braces
   alt?: string;
 }
 
-// HeroSection component represents the hero section of the landing page
 const HeroSection: React.FC<HeroSectionProps> = ({
   title = "Be The First Delivery & Easy Pick UP",
   subtitle = "Experience culinary excellence with our diverse menu, online ordering, and personalized table reservations. Join us for unparalleled dining satisfaction.",
-  imageUrl = "./src/assets/N2HMMGN-2.png",
+  imageUrl = heroImage,
   alt = "Default description of your image",
 }) => {
   return (
