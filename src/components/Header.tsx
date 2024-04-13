@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import MobNav from "./MobNav";
 import MainNav from "./MainNav";
+import logo from "../assets/logo1.png";
 
 // Header component renders the header section of the application
 const Header = () => {
@@ -12,7 +13,7 @@ const Header = () => {
         {" "}
         <Link to="/" className="flex items-center">
           <img
-            src="./src/assets/logo1.png"
+            src={logo}
             alt="DineNight Logo"
             className="size-16 object-contain mr-2"
           />
