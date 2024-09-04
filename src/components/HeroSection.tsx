@@ -37,7 +37,7 @@ const TextSection: React.FC<TextSectionProps> = ({ title, subtitle }) => {
         <div className="flex justify-center items-start mb-6 space-x-2 sm:space-x-0 ">
           <div className="flex-1 flex flex-col justify-center gap-2  py-5">
             <Utensils className="text-rose-500" />
-            <span className="text-base font-medium">Delicious</span>
+            <span className="text-base font-medium">Delicioussss</span>
           </div>
 
           <div className="flex-1 flex flex-col justify-center gap-2 py-5">
